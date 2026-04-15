@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Film Search App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <h1>Movie Search</h1>
+
+  <!-- Search -->
+  <input type="text" id="searchInput" placeholder="Search movies..." />
+  <button onclick="searchMovies()">Search</button>
+  <div id="loading" class="hidden">Loading<span class="dots">...</span>
+</div>
+  <!-- Sort -->
+  <select id="sortSelect" onchange="sortMovies()">
+    <option value="">Sort</option>
+    <option value="az">A → Z</option>
+    <option value="za">Z → A</option>
+    <option value="new">Newest → Oldest</option>
+    <option value="old">Oldest → Newest</option>
+  </select>
+
+
+
+
+  <!-- Results -->
+  <div id="results"></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Cris Lewis</p>
+  </footer>
+
+  <!--Plot Modal-->
+  <div id="modal" class="modal hidden">
+  <div class="modal-content">
+    
+
+    <img id="modalPoster" />
+
+    <div class="modal-text">
+      <h2 id="modalTitle"></h2>
+      <p id="modalYear"></p>
+      <p id="modalGenre"></p>
+      <p id="modalPlot"></p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
