@@ -6,6 +6,9 @@ let movies = [];
 async function searchMovies() {
   const query = document.getElementById("searchInput").value;
 
+  const content = document.getElementById("content");
+  content.style.display = "none"
+
   const loading = document.getElementById("loading");
   const results = document.getElementById("results");
 
@@ -28,14 +31,18 @@ async function searchMovies() {
 // Display movies
 function displayMovies(movieArray) {
   const results = document.getElementById("results");
+  const emptyState = document.getElementById("emptyState");
   results.innerHTML = "";
 
   
 
   if (movieArray.length === 0) {
-    results.innerHTML = "<p>No results found</p>";
+    emptyState.classList.remove("hidden");
     return;
   }
+
+  //Hide the empty state if we got sum
+  emptyState.classList.add("hidden");
 
   movieArray.slice(0, 6).forEach(movie => {
     const div = document.createElement("div");
