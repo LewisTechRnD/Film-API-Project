@@ -7,11 +7,27 @@
   <script src="script.js"></script>
 </head>
 <body>
-
-  <h1>Movie Search</h1>
-
+  <section id="landing">
+    <nav>
+        <div class="row nav__row">
+            <div class="nav__logo">
+            <div class="nav__logo--title">The Hall of Films</div>
+              </div>  
+            <div class="nav__links">
+                <a href="#" class="nav__link">About</a>
+                <a href="#" class="nav__link">Blog</a>
+                <a href="#" class="nav__link">Rentals</a>
+                <a href="#" class="nav__link">Contact</a>
+                <a href="#" class="nav__link--login">Login</a>
+                <a href="#" class="nav__link nav__link--primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+  </section>
+<main>
   <!-- Search -->
-  <input type="text" id="searchInput" placeholder="Search movies..." />
+   
+  <input type="text" id="searchInput" placeholder="Let's watch a movie..." />
   <button onclick="searchMovies()">Search</button>
   <div id="loading" class="hidden">Loading<span class="dots">...</span>
 </div>
@@ -25,16 +41,18 @@
   </select>
 
 
+<div id="content">
+  <img class= "movie__posters" src="./assets/03c085bf3e69ccb480a4bb3c0148794baa-evil-ai-movies.2x.rhorizontal.w1100.gif" alt="" class="movie__posters">
 
+</div>
+
+<div id="emptyState" class="hidden">
+  <img src="./assets/popcorn-bag-png-05042024-wvohyjwe2vywdfdy.png" alt="No results found" />
+  <h4>No movies found... Try another search.</h4>
+</div>
 
   <!-- Results -->
   <div id="results"></div>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Cris Lewis</p>
-  </footer>
-
   <!--Plot Modal-->
   <div id="modal" class="modal hidden">
   <div class="modal-content">
@@ -50,6 +68,13 @@
     </div>
 
   </div>
+</div>
+</main>
+  <!-- Footer -->
+  <footer>
+    <div class="row footer__row"></div>
+    <div class="footer__copyright">Copyright © 2026 Cristopher Lewis</div>
+  </footer>
 </div>
 </body>
 </html>
